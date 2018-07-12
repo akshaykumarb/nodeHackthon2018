@@ -15,7 +15,7 @@ class App extends Component {
 
 
     componentDidMount() {
-        axios.get('https://tesco-hackathon.herokuapp.com/api/cart/20').then(response => {
+        axios.get('https://tesco-hackathon.herokuapp.com/api/cart/1').then(response => {
             console.log((response));
             this.setState({status: 'done', cart: response.data});
         });
@@ -47,10 +47,10 @@ class App extends Component {
                         <thead>
                         <tr>
                             <th>
-                                id
+                                name
                             </th>
                             <th>
-                                name
+                                description
                             </th>
                             <th>
                                 price
@@ -61,8 +61,8 @@ class App extends Component {
                             {this.state.cart.map((cart) => {
                                 return (
                                     <tr key={cart.id}>
-                                        <td>{cart.id}</td>
                                         <td>{cart.item_name}</td>
+                                        <td>{cart.item_description}</td>
                                         <td>{cart.price}</td>
                                     </tr>
                                 );
