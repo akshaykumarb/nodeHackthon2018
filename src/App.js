@@ -25,8 +25,8 @@ class App extends Component {
 
         return (
             <div className="App">
-                <h1>App Cart</h1>
-                <h2>Items in the cart</h2>
+                <h1>AutoCart</h1>
+                <h2>Items in the basket</h2>
                 <p>current date is {this.state.date.toLocaleDateString()} </p>
                 <p>status is : {this.state.status}</p>
                 {this.createTable()}
